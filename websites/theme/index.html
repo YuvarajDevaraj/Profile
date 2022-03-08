@@ -1,0 +1,966 @@
+<!DOCTYPE html> 
+<html lang="en">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <head>
+      <link rel="stylesheet" href="source/css/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <body>
+      <div class="sec-1">
+         <div class="container">
+            <div class="mode">
+               <span>Light</span>
+               <label class="switch">
+                   <input type="checkbox" id="swc">
+                   <span class="slider"></span>
+               </label>
+               <span>Dark</span>
+            </div>
+            <h3>Subnet Calculator for IPV4</h3>
+            <p>The IP Subnet Calculator performs subnet calculations for the given network address block, subnet mask, maximum required hosts per subnet and determines the resulting broadcast address, subnet, Cisco wildcard mask and host range.</p>
+            <div class="col-sm-12 row">
+               <div class="col-sm-6">
+                  <table class="table tbl">
+                     <tbody>
+                        <tr>
+                           <td>Network Address Block</td>
+                           <td><input type="text" name="" value="10.0.0.0/"></td>
+                        </tr>
+                        <tr>
+                           <td>Subnet Mask</td>
+                           <td>
+                              <select>
+                                 <option>255.0.0.0/8</option>
+                                 <option>255.0.0.0/9</option>
+                              </select>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>No. of Hosts/Subnet</td>
+                           <td>
+                              <select>
+                                 <option>16777216</option>
+                                 <option>16777217</option>
+                              </select>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>Number of Subnets</td>
+                           <td>
+                              <select>
+                                 <option>1</option>
+                                 <option>2</option>
+                              </select>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="col-sm-6">
+                  <table class="table tbl">
+                     <tbody>
+                        <tr>
+                           <td>Host Address Range</td>
+                           <td><input type="text" name="" value="10.0.0.1 - 10.255.255.254" disabled=""></td>
+                        </tr>
+                        <tr>
+                           <td>Broadcast Address</td>
+                           <td><input type="text" name="" value="10.255.255.255" disabled=""></td>
+                        </tr>
+                        <tr>
+                           <td>Wildcard Mask</td>
+                           <td><input type="text" name="" value="0.255.255.255" disabled=""></td>
+                        </tr>
+                        <tr>
+                           <td>CIDR Notation</td>
+                           <td><input type="text" name="" value="10.0.0.0/8" disabled=""></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <h5>Subnet Details</h5>
+            <br>
+            <div>
+               <table class="table table-bordered">
+                  <thead>
+                     <tr>
+                        <th scope="col">Subnet ID</th>
+                        <th scope="col">Subnet Address</th>
+                        <th scope="col">Host Address Range</th>
+                        <th scope="col">Broadcast Address</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td data-label="Subnet ID">1</td>
+                        <td data-label="Subnet Address">10.0.0.0</td>
+                        <td data-label="Host Address Range">10.0.0.1-10.255.255.254</td>
+                        <td data-label="Broadcast Address">10.255.255.255</td>
+                     </tr>
+                     <tr>
+                        <td data-label="Subnet ID">2</td>
+                        <td data-label="Subnet Address">10.0.0.0</td>
+                        <td data-label="Host Address Range">12.0.4.2-10.323.244.33</td>
+                        <td data-label="Broadcast Address">10.255.255.255</td>
+                     </tr>
+                     <tr>
+                        <td data-label="Subnet ID">3</td>
+                        <td data-label="Subnet Address">10.0.0.0</td>
+                        <td data-label="Host Address Range">10.0.0.1-10.255.255.254</td>
+                        <td data-label="Broadcast Address">10.255.255.255</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+      <!--sec-2-->
+      <div class="container mt-3">
+         <div>
+            <h5>Subnetting</h5>
+            <p>There comes a time when the network becomes too large to manage and performance numbers hit an all-time low as a result of too much traffic.One of the most effective techniques to solve this network congestion problem is to break the TCP/IP network into smaller, more manageable pieces. The practice of dividing the network is called subnetting, and a tool that can identify these different divisions is called a subnettingcalculator.</p>
+            <h5>Need for a IPv4 subnet calculator</h5>
+            <p>Every subnet has an address to represent it and these subnets are interconnected via router. The router needs network address and subnet mask to find out whether the incoming IP packet has to be routed to any of its subnetwork. Performing network calculations can be hard at times when you have to consider different parameters as to how many subnets should I have and how  any hosts should be in a subnetwork.</p>
+            <p>The subnet calculator is a handy tool for finding the number of possible subnets for any given network address block. You can choose the combination of subnets and number of hosts per subnet that suits your network and get the host address range and broadcast address for any given subnet mask. Partitioning a large network and allocating IP address ranges to different teams is a task that can be calculated mentally, but it's better to have an option like an IP range calculator or  ubnet mask calculator to double check your subnet calculations before configuring them in the router.</p>
+         </div>
+         <hr>
+         <h3>Related System Administrator and Network Tools</h3>
+         <br>
+         <!-- Nav tabs -->
+         <ul class="nav nav-tabs">
+            <li class="nav-item">
+               <a class="nav-link active" data-toggle="tab" href="#one">System Administrator Tools</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" data-toggle="tab" href="#two">Validation Tools</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" data-toggle="tab" href="#three">Content Tools</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" data-toggle="tab" href="#four">Web Developer Tools</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" data-toggle="tab" href="#five">Developer Tools</a>
+            </li>
+         </ul>
+         <!-- Tab panes -->
+         <div class="tab-content">
+            <div class="moving">
+               <span>Grid</span>
+               <label class="switch">
+                   <input type="checkbox" id="crs">
+                   <span class="slider"></span>
+               </label>
+               <span>Carousel</span>
+            </div>
+
+            <div id="one" class="container tab-pane active aln">
+               <br>
+                        <!--slider-->
+         <div id="demo" class="carousel slide" data-ride="carousel">
+           <ul class="carousel-indicators">
+             <span data-target="#demo" data-slide-to="0" class="active">⦿</span>
+             &nbsp;&nbsp;&nbsp;<span data-target="#demo" data-slide-to="1" class="a">⦿</span>
+            </ul>
+           
+            <div class="container carousel-inner">
+             <div class="carousel-item active">
+               <img src="source/img/11.png" >
+               <div>
+                  <h6>Check Website Availability</h6>
+                  <p>Test if your website is available globally</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/12.png" >
+               <div>
+                  <h6>Analyze Full Webpage Objects</h6>
+                  <p>Analyze web page and optimize website performance</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/13.png" >
+               <div>
+                  <h6>Ping your Website or Webserver</h6>
+                  <p>Ping a host, IP or website</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/21.png" >
+               <div>
+                  <h6>DNS Analysis of your Domain</h6>
+                  <p>Check if domain resolves properly and generate a DNS Report</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/22.png" >
+               <div>
+                  <h6>Find IP Address</h6>
+                  <p>Resolve IP address of your domain</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/23.png" >
+               <div>
+                  <h6>Find Location of your Domain</h6>
+                  <p>IP to country mapping tool to find location of domain or IP</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/31.png" >
+               <div>
+                  <h6>Check Port Availability</h6>
+                  <p>Check if a TCP port is up from outside your datacenter and from over 60+locations worldwide</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/32.png" >
+               <div>
+                  <h6>Traceroute Generator</h6>
+                  <p>Traceroute to identify network latency issues and find how IP packets traverse the internet</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/33.png" >
+               <div>
+                  <h6>Monitor SSL Certificate</h6>
+                  <p>Ensure your customers trust you by maintaining a secure website</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/41.png" >
+               <div>
+                  <h6>Check Heartbleed Vulnerability</h6>
+                  <p>Test if any of your websites are vulnerable to the Heartbleed bug</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/42.png" >
+               <div>
+                  <h6>Check SSLV3 Poodle Vulnerability</h6>
+                  <p>Test if any of your websites are vulnerable to the SSLV3 Poodle bug </p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/43.png" >
+               <div>
+                  <h6>IPv4 Subnet Calculator</h6>
+                  <p>IPv4 Subnet Calculator performs classless network address calculations</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/51.png" >
+               <div>
+                  <h6>IPv6 Subnet Calculator</h6>
+                  <p>IPV6 IPv6 Subnet Calculator finds all possible subnets for a given IPv6 address block</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/52.png" >
+               <div>
+                  <h6>Random Password Generator</h6>
+                  <p>Create a strong random password</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/53.png" >
+               <div>
+                  <h6>AWS Designer</h6>
+                  <p>The AWS Designer helps in designing your AWS infrastructure</p>
+               </div>
+             </div>
+           </div>
+           <a class="carousel-control-prev" href="#demo" data-slide="prev">
+             <span class="a"><i class="fa fa-arrow-left"></i></span>
+           </a>
+           <a class="carousel-control-next" href="#demo" data-slide="next">
+             <span class="a"><i class="fa fa-arrow-right"></i></span>
+           </a>
+         </div>
+         <!--slider close-->
+               <div class="col-12 row">
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/11.png"></span>
+                     <span class="col-10">
+                        <h6>Check Website Availability</h6>
+                        <p>Test if your website is available globally</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/12.png"></span>
+                     <span class="col-10">
+                        <h6>Analyze Full Webpage Objects</h6>
+                        <p>Analyze web page and optimize website performance</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/13.png"></span>
+                     <span class="col-10">
+                        <h6>Ping your Website or Webserver</h6>
+                        <p>Ping a host, IP or website</p>
+                     </span>
+                  </div>
+               </div>
+               <div class="col-12 row ">
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/21.png"></span>
+                     <span class="col-10">
+                        <h6>DNS Analysis of your Domain</h6>
+                        <p>Check if domain resolves properly and generate a DNS Report</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/22.png"></span>
+                     <span class="col-10">
+                        <h6>Find IP Address</h6>
+                        <p>Resolve IP address of your domain</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/23.png"></span>
+                     <span class="col-10">
+                        <h6>Find Location of your Domain</h6>
+                        <p>IP to country mapping tool to find location of domain or IP</p>
+                     </span>
+                  </div>
+               </div>
+               <div class="col-12 row">
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/31.png"></span>
+                     <span class="col-10">
+                        <h6>Check Port Availability</h6>
+                        <p>Check if a TCP port is up from outside your datacenter and from over 60+locations worldwide</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/32.png"></span>
+                     <span class="col-10">
+                        <h6>Traceroute Generator</h6>
+                        <p>Traceroute to identify network latency issues and find how IP packets traverse the
+                           internet
+                        </p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/33.png"></span>
+                     <span class="col-10">
+                        <h6>Monitor SSL Certificate</h6>
+                        <p>Ensure your customers trust you by maintaining a secure website</p>
+                     </span>
+                  </div>
+               </div>
+               <div class="col-12 row">
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/41.png"></span>
+                     <span class="col-10">
+                        <h6>Check Heartbleed Vulnerability</h6>
+                        <p>Test if any of your websites are vulnerable to the Heartbleed bug</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/42.png"></span>
+                     <span class="col-10">
+                        <h6>Check SSLV3 Poodle Vulnerability</h6>
+                        <p>Test if any of your websites are vulnerable to the SSLV3 Poodle bug </p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/43.png"></span>
+                     <span class="col-10">
+                        <h6>IPv4 Subnet Calculator</h6>
+                        <p>IPv4 Subnet Calculator performs classless network address calculations</p>
+                     </span>
+                  </div>
+               </div>
+               <div class="col-12 row">
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/51.png"></span>
+                     <span class="col-10">
+                        <h6>IPv6 Subnet Calculator</h6>
+                        <p>IPV6 IPv6 Subnet Calculator finds all possible subnets for a given IPv6 address block</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/52.png"></span>
+                     <span class="col-10">
+                        <h6>Random Password Generator</h6>
+                        <p>Create a strong random password</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/53.png"></span>
+                     <span class="col-10">
+                        <h6>AWS Designer</h6>
+                        <p>The AWS Designer helps in designing your AWS infrastructure</p>
+                     </span>
+                  </div>
+               </div>
+            </div>
+
+            <div id="two" class="container tab-pane aln">
+               <br>
+                        <!--slider-->
+         <div id="two" class="carousel slide" data-ride="carousel">
+           <ul class="carousel-indicators">
+             <span data-target="#demo3" data-slide-to="0" class="active">⦿</span>
+             &nbsp;&nbsp;&nbsp;<span data-target="#demo2" data-slide-to="1" class="a">⦿</span>
+            </ul>
+           
+            <div class="container carousel-inner">
+              <div class="carousel-item active">
+               <img src="source/img/21.png" >
+               <div>
+                  <h6>DNS Analysis of your Domain</h6>
+                  <p>Check if domain resolves properly and generate a DNS Report</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/22.png" >
+               <div>
+                  <h6>Find IP Address</h6>
+                  <p>Resolve IP address of your domain</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/23.png" >
+               <div>
+                  <h6>Find Location of your Domain</h6>
+                  <p>IP to country mapping tool to find location of domain or IP</p>
+               </div>
+             </div>
+            <div class="carousel-item">
+               <img src="source/img/31.png" >
+               <div>
+                  <h6>Check Port Availability</h6>
+                  <p>Check if a TCP port is up from outside your datacenter and from over 60+locations worldwide</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/32.png" >
+               <div>
+                  <h6>Traceroute Generator</h6>
+                  <p>Traceroute to identify network latency issues and find how IP packets traverse the internet</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/33.png" >
+               <div>
+                  <h6>Monitor SSL Certificate</h6>
+                  <p>Ensure your customers trust you by maintaining a secure website</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/41.png" >
+               <div>
+                  <h6>Check Heartbleed Vulnerability</h6>
+                  <p>Test if any of your websites are vulnerable to the Heartbleed bug</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/42.png" >
+               <div>
+                  <h6>Check SSLV3 Poodle Vulnerability</h6>
+                  <p>Test if any of your websites are vulnerable to the SSLV3 Poodle bug </p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/43.png" >
+               <div>
+                  <h6>IPv4 Subnet Calculator</h6>
+                  <p>IPv4 Subnet Calculator performs classless network address calculations</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/51.png" >
+               <div>
+                  <h6>IPv6 Subnet Calculator</h6>
+                  <p>IPV6 IPv6 Subnet Calculator finds all possible subnets for a given IPv6 address block</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/52.png" >
+               <div>
+                  <h6>Random Password Generator</h6>
+                  <p>Create a strong random password</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/53.png" >
+               <div>
+                  <h6>AWS Designer</h6>
+                  <p>The AWS Designer helps in designing your AWS infrastructure</p>
+               </div>
+             </div>
+           </div>
+           <a class="carousel-control-prev" href="#demo2" data-slide="prev">
+             <span class="a"><i class="fa fa-arrow-left"></i></span>
+           </a>
+           <a class="carousel-control-next" href="#demo2" data-slide="next">
+             <span class="a"><i class="fa fa-arrow-right"></i></span>
+           </a>
+         </div>
+         <!--slider close-->
+         <div class="col-12 row ">
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/21.png"></span>
+                     <span class="col-10">
+                        <h6>DNS Analysis of your Domain</h6>
+                        <p>Check if domain resolves properly and generate a DNS Report</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/22.png"></span>
+                     <span class="col-10">
+                        <h6>Find IP Address</h6>
+                        <p>Resolve IP address of your domain</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/23.png"></span>
+                     <span class="col-10">
+                        <h6>Find Location of your Domain</h6>
+                        <p>IP to country mapping tool to find location of domain or IP</p>
+                     </span>
+                  </div>
+               </div>
+               <div class="col-12 row">
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/31.png"></span>
+                     <span class="col-10">
+                        <h6>Check Port Availability</h6>
+                        <p>Check if a TCP port is up from outside your datacenter and from over 60+locations worldwide</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/32.png"></span>
+                     <span class="col-10">
+                        <h6>Traceroute Generator</h6>
+                        <p>Traceroute to identify network latency issues and find how IP packets traverse the
+                           internet
+                        </p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/33.png"></span>
+                     <span class="col-10">
+                        <h6>Monitor SSL Certificate</h6>
+                        <p>Ensure your customers trust you by maintaining a secure website</p>
+                     </span>
+                  </div>
+               </div>
+               <div class="col-12 row">
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/41.png"></span>
+                     <span class="col-10">
+                        <h6>Check Heartbleed Vulnerability</h6>
+                        <p>Test if any of your websites are vulnerable to the Heartbleed bug</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/42.png"></span>
+                     <span class="col-10">
+                        <h6>Check SSLV3 Poodle Vulnerability</h6>
+                        <p>Test if any of your websites are vulnerable to the SSLV3 Poodle bug </p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/43.png"></span>
+                     <span class="col-10">
+                        <h6>IPv4 Subnet Calculator</h6>
+                        <p>IPv4 Subnet Calculator performs classless network address calculations</p>
+                     </span>
+                  </div>
+               </div>
+               <div class="col-12 row">
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/51.png"></span>
+                     <span class="col-10">
+                        <h6>IPv6 Subnet Calculator</h6>
+                        <p>IPV6 IPv6 Subnet Calculator finds all possible subnets for a given IPv6 address block</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/52.png"></span>
+                     <span class="col-10">
+                        <h6>Random Password Generator</h6>
+                        <p>Create a strong random password</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/53.png"></span>
+                     <span class="col-10">
+                        <h6>AWS Designer</h6>
+                        <p>The AWS Designer helps in designing your AWS infrastructure</p>
+                     </span>
+                  </div>
+               </div>
+            </div>
+
+            <div id="three" class="container tab-pane aln">
+               <br>
+                        <!--slider-->
+         <div id="demo3" class="carousel slide" data-ride="carousel">
+           <ul class="carousel-indicators">
+             <span data-target="#demo3" data-slide-to="0" class="active">⦿</span>
+             &nbsp;&nbsp;&nbsp;<span data-target="#demo3" data-slide-to="1" class="a">⦿</span>
+            </ul>
+           
+            <div class="container carousel-inner">
+            <div class="carousel-item active">
+               <img src="source/img/31.png" >
+               <div>
+                  <h6>Check Port Availability</h6>
+                  <p>Check if a TCP port is up from outside your datacenter and from over 60+locations worldwide</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/32.png" >
+               <div>
+                  <h6>Traceroute Generator</h6>
+                  <p>Traceroute to identify network latency issues and find how IP packets traverse the internet</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/33.png" >
+               <div>
+                  <h6>Monitor SSL Certificate</h6>
+                  <p>Ensure your customers trust you by maintaining a secure website</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/41.png" >
+               <div>
+                  <h6>Check Heartbleed Vulnerability</h6>
+                  <p>Test if any of your websites are vulnerable to the Heartbleed bug</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/42.png" >
+               <div>
+                  <h6>Check SSLV3 Poodle Vulnerability</h6>
+                  <p>Test if any of your websites are vulnerable to the SSLV3 Poodle bug </p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/43.png" >
+               <div>
+                  <h6>IPv4 Subnet Calculator</h6>
+                  <p>IPv4 Subnet Calculator performs classless network address calculations</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/51.png" >
+               <div>
+                  <h6>IPv6 Subnet Calculator</h6>
+                  <p>IPV6 IPv6 Subnet Calculator finds all possible subnets for a given IPv6 address block</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/52.png" >
+               <div>
+                  <h6>Random Password Generator</h6>
+                  <p>Create a strong random password</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/53.png" >
+               <div>
+                  <h6>AWS Designer</h6>
+                  <p>The AWS Designer helps in designing your AWS infrastructure</p>
+               </div>
+             </div>
+           </div>
+           <a class="carousel-control-prev" href="#demo3" data-slide="prev">
+             <span class="a"><i class="fa fa-arrow-left"></i></span>
+           </a>
+           <a class="carousel-control-next" href="#demo3" data-slide="next">
+             <span class="a"><i class="fa fa-arrow-right"></i></span>
+           </a>
+         </div>
+         <!--slider close-->
+               <div class="col-12 row">
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/31.png"></span>
+                     <span class="col-10">
+                        <h6>Check Port Availability</h6>
+                        <p>Check if a TCP port is up from outside your datacenter and from over 60+locations worldwide</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/32.png"></span>
+                     <span class="col-10">
+                        <h6>Traceroute Generator</h6>
+                        <p>Traceroute to identify network latency issues and find how IP packets traverse the
+                           internet
+                        </p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/33.png"></span>
+                     <span class="col-10">
+                        <h6>Monitor SSL Certificate</h6>
+                        <p>Ensure your customers trust you by maintaining a secure website</p>
+                     </span>
+                  </div>
+               </div>
+               <div class="col-12 row">
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/41.png"></span>
+                     <span class="col-10">
+                        <h6>Check Heartbleed Vulnerability</h6>
+                        <p>Test if any of your websites are vulnerable to the Heartbleed bug</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/42.png"></span>
+                     <span class="col-10">
+                        <h6>Check SSLV3 Poodle Vulnerability</h6>
+                        <p>Test if any of your websites are vulnerable to the SSLV3 Poodle bug </p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/43.png"></span>
+                     <span class="col-10">
+                        <h6>IPv4 Subnet Calculator</h6>
+                        <p>IPv4 Subnet Calculator performs classless network address calculations</p>
+                     </span>
+                  </div>
+               </div>
+               <div class="col-12 row">
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/51.png"></span>
+                     <span class="col-10">
+                        <h6>IPv6 Subnet Calculator</h6>
+                        <p>IPV6 IPv6 Subnet Calculator finds all possible subnets for a given IPv6 address block</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/52.png"></span>
+                     <span class="col-10">
+                        <h6>Random Password Generator</h6>
+                        <p>Create a strong random password</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/53.png"></span>
+                     <span class="col-10">
+                        <h6>AWS Designer</h6>
+                        <p>The AWS Designer helps in designing your AWS infrastructure</p>
+                     </span>
+                  </div>
+               </div>
+            </div>
+
+            <div id="four" class="container tab-pane aln">
+               <br>
+                        <!--slider-->
+         <div id="demo4" class="carousel slide" data-ride="carousel">
+           <ul class="carousel-indicators">
+             <span data-target="#demo4" data-slide-to="0" class="active">⦿</span>
+             &nbsp;&nbsp;&nbsp;<span data-target="#demo4" data-slide-to="1" class="a">⦿</span>
+            </ul>
+           
+            <div class="container carousel-inner">
+            <div class="carousel-item active">
+               <img src="source/img/41.png" >
+               <div>
+                  <h6>Check Heartbleed Vulnerability</h6>
+                  <p>Test if any of your websites are vulnerable to the Heartbleed bug</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/42.png" >
+               <div>
+                  <h6>Check SSLV3 Poodle Vulnerability</h6>
+                  <p>Test if any of your websites are vulnerable to the SSLV3 Poodle bug </p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/43.png" >
+               <div>
+                  <h6>IPv4 Subnet Calculator</h6>
+                  <p>IPv4 Subnet Calculator performs classless network address calculations</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/51.png" >
+               <div>
+                  <h6>IPv6 Subnet Calculator</h6>
+                  <p>IPV6 IPv6 Subnet Calculator finds all possible subnets for a given IPv6 address block</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/52.png" >
+               <div>
+                  <h6>Random Password Generator</h6>
+                  <p>Create a strong random password</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/53.png" >
+               <div>
+                  <h6>AWS Designer</h6>
+                  <p>The AWS Designer helps in designing your AWS infrastructure</p>
+               </div>
+             </div>
+           </div>
+           <a class="carousel-control-prev" href="#demo4" data-slide="prev">
+             <span class="a"><i class="fa fa-arrow-left"></i></span>
+           </a>
+           <a class="carousel-control-next" href="#demo4" data-slide="next">
+             <span class="a"><i class="fa fa-arrow-right"></i></span>
+           </a>
+         </div>
+         <!--slider close-->
+               <div class="col-12 row">
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/41.png"></span>
+                     <span class="col-10">
+                        <h6>Check Heartbleed Vulnerability</h6>
+                        <p>Test if any of your websites are vulnerable to the Heartbleed bug</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/42.png"></span>
+                     <span class="col-10">
+                        <h6>Check SSLV3 Poodle Vulnerability</h6>
+                        <p>Test if any of your websites are vulnerable to the SSLV3 Poodle bug </p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/43.png"></span>
+                     <span class="col-10">
+                        <h6>IPv4 Subnet Calculator</h6>
+                        <p>IPv4 Subnet Calculator performs classless network address calculations</p>
+                     </span>
+                  </div>
+               </div>
+               <div class="col-12 row">
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/51.png"></span>
+                     <span class="col-10">
+                        <h6>IPv6 Subnet Calculator</h6>
+                        <p>IPV6 IPv6 Subnet Calculator finds all possible subnets for a given IPv6 address block</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/52.png"></span>
+                     <span class="col-10">
+                        <h6>Random Password Generator</h6>
+                        <p>Create a strong random password</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/53.png"></span>
+                     <span class="col-10">
+                        <h6>AWS Designer</h6>
+                        <p>The AWS Designer helps in designing your AWS infrastructure</p>
+                     </span>
+                  </div>
+               </div>
+            </div>
+
+            <div id="five" class="container tab-pane aln">
+               <br>
+                        <!--slider-->
+         <div id="demo5" class="carousel slide" data-ride="carousel">
+           <ul class="carousel-indicators">
+             <span data-target="#demo5" data-slide-to="0" class="active">⦿</span>
+             &nbsp;&nbsp;&nbsp;<span data-target="#demo5" data-slide-to="1" class="a">⦿</span>
+            </ul>
+           
+            <div class="container carousel-inner">
+            <div class="carousel-item active">
+               <img src="source/img/51.png" >
+               <div>
+                  <h6>IPv6 Subnet Calculator</h6>
+                  <p>IPV6 IPv6 Subnet Calculator finds all possible subnets for a given IPv6 address block</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/52.png" >
+               <div>
+                  <h6>Random Password Generator</h6>
+                  <p>Create a strong random password</p>
+               </div>
+             </div>
+             <div class="carousel-item">
+               <img src="source/img/53.png" >
+               <div>
+                  <h6>AWS Designer</h6>
+                  <p>The AWS Designer helps in designing your AWS infrastructure</p>
+               </div>
+             </div>
+           </div>
+           <a class="carousel-control-prev" href="#demo5" data-slide="prev">
+             <span class="a"><i class="fa fa-arrow-left"></i></span>
+           </a>
+           <a class="carousel-control-next" href="#demo5" data-slide="next">
+             <span class="a"><i class="fa fa-arrow-right"></i></span>
+           </a>
+         </div>
+         <!--slider close-->
+               <div class="col-12 row">  
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/51.png"></span>
+                     <span class="col-10">
+                        <h6>IPv6 Subnet Calculator</h6>
+                        <p>IPV6 IPv6 Subnet Calculator finds all possible subnets for a given IPv6 address block</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/52.png"></span>
+                     <span class="col-10">
+                        <h6>Random Password Generator</h6>
+                        <p>Create a strong random password</p>
+                     </span>
+                  </div>
+                  <div class="col row">
+                     <span class="col-2"><img src="source/img/53.png"></span>
+                     <span class="col-10">
+                        <h6>AWS Designer</h6>
+                        <p>The AWS Designer helps in designing your AWS infrastructure</p>
+                     </span>
+                  </div>
+               </div>
+            </div>
+
+            <!--tab con close-->
+         
+         </div>
+         <br><br>
+      </div>
+   </body>
+   <script>
+       $('#swc').on('change',function(e) {
+
+             if ($(this).prop('checked')) {
+                  $('body').css({'background':'#000','color':'#fff'});
+                  $('.tbl').css({'background':'#000','color':'#fff'});
+                  $('.sec-1').css({'background':'#000','color':'#fff'});
+                  $('.nav-link').css('color','#fff');
+             } else {
+                 $('body').css({'background':'#fff','color':'#000'});
+                 $('.tbl').css({'background':'#F4F4F4','color':'#000'});
+                 $('.sec-1').css({'background':'#F4F4F4','color':'#000'});
+                 $('.nav-link').css('color','#000');
+             }
+         });
+         $('#crs').on('change',function(e) {
+
+              if ($(this).prop('checked')) {
+                   $('.carousel').css('display','inherit');
+                   $('.tab-content .col-12').css('display','none');
+              } else {
+                   $('.carousel').css('display','none');
+                   $('.tab-content .col-12').css('display','inherit');
+              }
+          });
+
+   </script>
+</html>
