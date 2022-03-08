@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand mm" href="#">
+                <div class="sbr">
+                    <img class="img-profile rounded-circle" src="img/profile.png">              
+                    <div>David Williams</div> 
+                    <p class="pbd">Art Director &nbsp;<i class="fas fa-sort-down"></i></p>  
+                </div>
+                <div class="msbr">IN+</div>                           
+            </a>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-th-large"></i>
+                    <span>Dashboards</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="far fa-gem"></i>
+                    <span>Layouts</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Graphs</span>
+                </a>
+            </li>
+
+            <li class="nav-item mm mm1">
+                <a class="nav-link ml" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="far fa-envelope"></i>
+                    <span>Mailbox</span> <span class="right"><button class="btn-warning">16/24</button></span>
+                </a>
+                <div id="collapseUtilities" class="collapse show" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner">
+                        <a class="collapse-item ac" href="#">Inbox</a>
+                        <a class="collapse-item" href="#">Email view</a>
+                        <a class="collapse-item" href="#">Compose email</a>
+                        <a class="collapse-item" href="#">Email templates</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Metrics</span></a>
+            </li>  
+
+             <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-flask"></i>
+                    <span>Widgets</span></a>
+            </li>      
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="far fa-edit"></i>
+                    <span>Forms</span>
+                </a>
+            </li>    
+
+             <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-desktop"></i>
+                    <span>App Views</span><span class="right"><button class="btn-success">SPECIAL</button></span>
+                </a>
+            </li>    
+
+        </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                        <div class="input-group">                                                 
+                            <div class="text-center d-none d-md-inline input-group-append">
+                                <button class="btn btn-success" id="sidebarToggle">
+                                    <i class="fas fa-bars"></i>
+                                </button>
+                            </div>
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for somthing...">                           
+                        </div>
+                    <ul class="navbar-nav ml-auto">
+                         <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-warning badge-counter">16</span>
+                            </a>                            
+                        </li>
+
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-success badge-counter">8</span>
+                            </a>                            
+                        </li>
+
+                       
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><i class="fas fa-sign-in-alt"></i> Log out</span>                             
+                            </a>                            
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <div class="col-sm-12 row bck" id="mail1">
+                    <div class="col-sm-3">
+                        <div><button class="btn-success cml">Compose Mail</button></div><br>
+                        <div class="mail">
+                            <h6>FOLDERS</h6>
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <i class="fas fa-inbox"></i>&nbsp;Inbox<span class="right"><button class="btn-warning">16</button></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <i class="far fa-envelope"></i>&nbsp;Send Mail<span class="right"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <i class="fas fa-certificate"></i>&nbsp;Important<span class="right"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <i class="far fa-file"></i>&nbsp;Drafts<span class="right"><button class="btn-danger">2</button></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <i class="far fa-trash-alt"></i>&nbsp;Trash<span class="right"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <h6>CATEGORIES</h6>
+                            <table class="table tbl">
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <i class="fas fa-circle"></i>&nbsp;&nbsp;Work
+                                        </a>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td>
+                                        <a href="#">
+                                            <i class="fas fa-circle"></i>&nbsp;&nbsp;Documents
+                                        </a>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td>
+                                        <a href="#">
+                                            <i class="fas fa-circle"></i>&nbsp;&nbsp;Social
+                                        </a>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td>
+                                        <a href="#">
+                                            <i class="fas fa-circle"></i>&nbsp;&nbsp;Adverdising
+                                        </a>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td>
+                                        <a href="#">
+                                            <i class="fas fa-circle"></i>&nbsp;&nbsp;Clients
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <h6>LABELS</h6>
+                            <div class="bfs">
+                                <p>
+                                    <button><i class="fas fa-tag"></i> &nbsp;Family</button>
+                                    <button><i class="fas fa-tag"></i> &nbsp;Work</button>
+                                    <button><i class="fas fa-tag"></i> &nbsp;Home</button>
+                                </p>
+                                <p>
+                                    <button><i class="fas fa-tag"></i> &nbsp;Children</button>
+                                    <button><i class="fas fa-tag"></i> &nbsp;Holidays</button>
+                                    <button><i class="fas fa-tag"></i> &nbsp;Music</button>
+                                </p>
+                                <p>
+                                    <button><i class="fas fa-tag"></i> &nbsp;Photography</button>
+                                    <button><i class="fas fa-tag"></i> &nbsp;Flim</button>
+                                </p>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="col-sm-12 row">
+                            <div class="col-sm-6 bfs">
+                                <h2>Index (16)</h2><br>
+                                <button><i class="fas fa-sync-alt"></i>&nbsp;Refresh</button>
+                                <button><i class="fa fa-eye"></i></button>
+                                <button><i class="fas fa-exclamation"></i></button>
+                                <button><i class="far fa-trash-alt"></i></button>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="input-group bfs">                                        
+                                    <input type="text" class="form-control" placeholder="Search email"> 
+                                    <div class="input-group-append">
+                                        <button class="btn btn-success" type="button">Search</button>                 
+                                    </div>                          
+                                </div><br>
+                                <p class="right">
+                                    <button><i class="fas fa-arrow-left"></i></button>
+                                    <button><i class="fas fa-arrow-right"></i></button>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mtable">
+                            <table class="table">  
+                                <tr>
+                                    <td><input type="checkbox"><span class="mark"></span>
+                                    </td>
+                                    <td>Anna Smith</td>
+                                    <td></td>
+                                    <td>Lorem ipsum dolor noretek limit set</td>                                
+                                    <td><i class="fas fa-paperclip"></i></td>
+                                    <td>6.10 AM</td>
+                                </tr>                          
+                                <tr>
+                                    <td><input type="checkbox" checked=""><span class="mark"></span>
+                                    </td>
+                                    <td>Jack Nowak</td>
+                                    <td></td>
+                                    <td>Aldus PageMaker including versions of Lorem Ipsum.</td>                           
+                                    <td></td>
+                                    <td>8.22 PM</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Facebook</td>
+                                    <td><button class="btn-warning">Clients</button></td>
+                                    <td>Many desktop publishing packages and web page editors.</td>                      
+                                    <td></td>
+                                    <td>Jan 16</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Mailchip</td>
+                                    <td></td>
+                                    <td>There are many variations of passages of Lorem Ipsum.</td>                         
+                                    <td></td>
+                                    <td>Mar 22</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Alex T</td>
+                                    <td><button class="btn-danger">Documents</button></td>
+                                    <td>Lorem ipsum dolor noretek imit set.</td>                                
+                                    <td><i class="fas fa-paperclip"></i></td>
+                                    <td>December 22</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Monica Ryther</td>
+                                    <td></td>
+                                    <td>The standard chunk of Lorem Ipsum used.</td>                      
+                                    <td></td>
+                                    <td>Jun 12</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Sandra Derick</td>
+                                    <td></td>
+                                    <td>Contrary to popular belief.</td>                         
+                                    <td></td>
+                                    <td>May 28</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Patrick Pertners</td>
+                                    <td><button class="btn-info">Adv</button></td>
+                                    <td>If you are going to use a passage of Lorem</td>                                
+                                    <td></td>
+                                    <td>May 28</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Michael Fox</td>
+                                    <td></td>
+                                    <td>Humour, or non-characteristic words etc.</td>                      
+                                    <td></td>
+                                    <td>Dec 9</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Damien Ritz</td>
+                                    <td></td>
+                                    <td>Oor Lorem Ipsum is that it has a more-or-less normal.</td>                         
+                                    <td></td>
+                                    <td>Jun 11</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div> 
+            </div>    
+        </div>
+    </div>
+    <div class="set"><button class="btn-success"><i class="fas fa-cogs"></i></button></div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
